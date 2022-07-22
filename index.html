@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" \>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "description" content = "Spotify Clone" \>
+        <meta name = "keywords" content = "spotify,music,song" \>
+        <meta name = "author" content = "Kashyap" \>
+        <meta name = "viewport" content = "width = device-width, initial-scale=1.0" \>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./assets//favicon/site.webmanifest">
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5BBAD5">
+        <meta name="msapplication-TileColor" content="#DA532C">
+        <meta name="theme-color" content="#FFFFFF">
+
+        <link rel="stylesheet" href="./statics/CSS/global.css">
+        <link rel="stylesheet" href="./statics/CSS/styles.css">
+
+        <title>Musify</title>
+    </head>
+
+    <body class="app">
+        <nav class="app_navbar">
+            <a href="/" class="flex mx-auto align-center">
+                <figure class="navbar_figure flex align-center cursor-pointer">
+                    <img src="./assets/spotify.png" alt="" class="navbar_figure_img object-cover">
+                    <p>Musify</p>
+                </figure>
+            </a>
+        </nav>
+        <div class="app_song mx-auto flex align-start">
+            <div class="app_song--currentSong flex">
+                <h2>Now Playing</h2>
+                <img src="./assets/spotify.png" alt="" class="object-cover currentSongCover">
+                <span>
+                    <p class="currentSongName">Song Name</p>
+                    <p class="currentSongDescription">Song Description</p>
+                </span>
+            </div>
+            <div class="app_song--songlist flex flex-1">
+                <h1>Best of NCS - No Copyright Sounds</h1>
+                <div class="app_song--songlistContainer flex" id="songlistContainer"></div>
+            </div>
+        </div>
+        <div class="app_player">
+            <div class="app_player--wrapper mx-auto flex">
+                <div class="grid flex-1">
+                    <div class="player--wrapper_songInfo flex col-span-1">
+                        <img src="./assets/spotify.png" alt="" class="object-cover currentSongCover">
+                        <span class="player--wrapper_songInfo_songDescription flex justify-center">
+                            <p class="currentSongName">Song Name</p>
+                            <p class="currentSongDescription">Song Description</p>
+                        </span>
+                    </div>
+                    <div class="app_player_playcontroll col-span-1 flex align-center justify-center">
+                        <i role="button" class="app_player_playcontrollIcons fa-solid fa-backward-step icons songChangeButton disabled" id="backward"></i>
+                        <i role="button" class="app_player_playcontrollIcons fa-solid fa-circle-play icons" id="playPause"></i>
+                        <i role="button" class="app_player_playcontrollIcons fa-solid fa-forward-step icons songChangeButton" id="forward"></i>
+                    </div>
+                    <div class="player--wrapper_songInfo_songTimer col-span-1 flex align-center justify-end">
+                        <i role="button" class="fa-solid fa-volume-high icons" id="volume" title="Mute"></i>
+                        <i role="button" class="fa-solid fa-repeat icons" id="repeat" title="Repeat"></i>
+                        <p id="player--songTimer"></p>
+                    </div>
+                </div>
+                <input type="range" value="0" min="0" max="100" step="0.0048" id="range" class="cursor-pointer flex justify-start" />
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/9cc0baf84d.js" crossorigin="anonymous"></script>
+        <script type="module" src="./statics/JS/scripts.js"></script>
+        <script type="module" src="./statics/JS/songs.js"></script>
+    </body>
+</html>
